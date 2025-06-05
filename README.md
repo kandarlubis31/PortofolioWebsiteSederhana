@@ -29,42 +29,38 @@ Website ini dibangun dengan fokus pada desain yang bersih, modern, dan pengalama
 * **Formspree.io:** Untuk penanganan pengiriman formulir kontak.
 
 ## Struktur Proyek
-
-.
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── images/ (opsional, untuk gambar profil/proyek)
-└── index.html
-
+![alt text](image.png)
 
 ## Cara Menjalankan Proyek (Lokal)
 
 1.  **Clone repositori ini:**
     ```bash
-    git clone [https://github.com/your-username/your-portfolio-repo.git](https://github.com/your-username/your-portfolio-repo.git)
+    git clone [https://github.com/kandarlubis31/PortofolioWebsiteSederhana.git](https://github.com/kandarlubis31/PortofolioWebsiteSederhana.git)
     ```
-    *(Ganti `your-username/your-portfolio-repo.git` dengan URL repositori kamu yang sebenarnya.)*
 2.  **Masuk ke direktori proyek:**
     ```bash
-    cd your-portfolio-repo
+    cd PortofolioWebsiteSederhana
     ```
 3.  **Buka file `index.html`** di *browser* pilihanmu (misalnya, Chrome, Firefox).
 
 ## Live Demo
 
 Lihat versi langsung dari website ini di sini:
-[Link Live Demo Kamu] *(Contoh: `https://yourusername.github.io/your-portfolio-repo/`)*
+[https://kandarlubis31.github.io/PortofolioWebsiteSederhana/](https://kandarlubis31.github.io/PortofolioWebsiteSederhana/)
 
 ## Kontak
 
 Jangan ragu untuk menghubungi saya melalui:
 
-* **Email:** [nama@email.com]
-* **LinkedIn:** [Link Profil LinkedIn Kamu]
-* **GitHub:** [Link Profil GitHub Kamu]
+* **Email:** [nama@email.com] *(Ganti dengan alamat email pribadimu)*
+* **LinkedIn:** [Link Profil LinkedIn Kamu] *(Ganti dengan link profil LinkedIn pribadimu)*
+* **GitHub:** [https://github.com/kandarlubis31](https://github.com/kandarlubis31)
 
 ---
 
 Terima kasih telah mengunjungi portofolio saya!
+
+
+
+
+
