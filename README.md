@@ -35,7 +35,7 @@ Website ini dibangun dengan fokus pada desain yang bersih, modern, dan pengalama
 
 1.  **Clone repositori ini:**
     ```bash
-    git clone (https://github.com/kandarlubis31/PortofolioWebsiteSederhana.git)
+    git clone https://github.com/kandarlubis31/PortofolioWebsiteSederhana.git
     ```
 2.  **Masuk ke direktori proyek:**
     ```bash
