@@ -52,10 +52,7 @@ Lihat versi langsung dari website ini di sini:
 
 Jangan ragu untuk menghubungi saya melalui:
 
-* **Email:** [nama@email.com] *(Ganti dengan alamat email pribadimu)*
-* **LinkedIn:** [Link Profil LinkedIn Kamu] *(Ganti dengan link profil LinkedIn pribadimu)*
-* **GitHub:** [https://github.com/kandarlubis31](https://github.com/kandarlubis31)
-
+* **Email:** [kandarlubis31@email.com]
 ---
 
 Terima kasih telah mengunjungi portofolio saya!
