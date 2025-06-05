@@ -1,0 +1,769 @@
+/* Custom Properties (Variabel CSS) - TIDAK ADA PERUBAHAN DI SINI */
+:root {
+    --primary-color: #6366f1; /* Indigo */
+    --secondary-color: #8b5cf6; /* Violet */
+    --text-dark: #333;
+    --text-light: #f0f0f0;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --header-bg-alpha: rgba(255, 255, 255, 0.95);
+    --box-shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --box-shadow-medium: 0 10px 20px rgba(0, 0, 0, 0.2);
+    --border-radius-default: 10px;
+    --transition-speed: 0.3s;
+}
+
+/* Base Styles - TIDAK ADA PERUBAHAN DI SINI */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Header & Navigation - SEDIKIT PENYESUAIAN */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--header-bg-alpha);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all var(--transition-speed) ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color var(--transition-speed) ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-dark);
+    margin: 3px 0;
+    transition: var(--transition-speed);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hero Section - SEDIKIT PENYESUAIAN */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    /* Tambahkan min-height agar tidak terlalu pendek di mobile landscape */
+    min-height: 500px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    animation: float 20s infinite linear;
+    z-index: 1;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100px, -100px);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease forwards;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease 0.2s forwards;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all var(--transition-speed) ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease 0.4s forwards;
+}
+
+.cta-button:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-medium);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sections - SEDIKIT PENYESUAIAN */
+section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-dark);
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* About Section - SEDIKIT PENYESUAIAN */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    height: 400px;
+    background: var(--bg-light);
+    border-radius: var(--border-radius-default);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Skills Section - TIDAK ADA PERUBAHAN DI SINI */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.skill-card {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: var(--border-radius-default);
+    box-shadow: var(--box-shadow-light);
+    text-align: center;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+}
+
+/* Projects Section - TIDAK ADA PERUBAHAN DI SINI */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-default);
+    overflow: hidden;
+    box-shadow: var(--box-shadow-light);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tech-tag {
+    background: var(--bg-light);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-link {
+    padding: 0.6rem 1.2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.project-link:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Contact Section - SEDIKIT PENYESUAIAN */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.contact-info {
+    background: var(--bg-light);
+    padding: 2.5rem;
+    border-radius: var(--border-radius-default);
+    box-shadow: var(--box-shadow-light);
+}
+
+.contact-info h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.contact-info p {
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-item strong {
+    color: var(--text-dark);
+}
+
+.contact-item a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius-default);
+    box-shadow: var(--box-shadow-light);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.submit-btn {
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background var(--transition-speed) ease, transform var(--transition-speed) ease;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Footer - TIDAK ADA PERUBAHAN DI SINI */
+footer {
+    background: var(--text-dark);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.social-link:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+---
+
+### Responsive Design (Penyempurnaan)
+
+Ini adalah bagian paling penting untuk responsivitas. Saya akan menambahkan beberapa *media queries* dan menyesuaikan nilai-nilai yang ada.
+
+```css
+/* Responsive Design */
+
+/* General adjustments for smaller screens */
+@media (max-width: 992px) {
+    /* Adjust section padding for slightly smaller desktops/large tablets */
+    section {
+        padding: 4rem 1.5rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem; /* Slightly smaller hero title */
+    }
+
+    .hero p {
+        font-size: 1.1rem; /* Slightly smaller hero paragraph */
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Header & Navigation */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--header-bg-alpha);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left var(--transition-speed) ease;
+        gap: 1.5rem;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2.5rem; /* Further reduce font size for smaller tablets/large phones */
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* About Section */
+    .about-content {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .about-image {
+        height: 300px;
+        /* Optional: Center image for aesthetic if needed, though grid will do this for 1fr */
+        margin: 0 auto;
+    }
+
+    /* Skills Section - Already good with auto-fit, but ensure minimum size */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Allow skill cards to be smaller */
+        gap: 1.5rem;
+    }
+
+    /* Projects Section - Already good with auto-fit */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ensure projects are not too small */
+        gap: 1.5rem;
+    }
+
+    /* Contact Section */
+    .contact-content {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        gap: 2rem;
+    }
+
+    /* General Section Padding & Heading Sizes */
+    section {
+        padding: 3rem 1rem; /* Reduced padding for more screen space */
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens (e.g., smaller phones) */
+    nav {
+        padding: 0 1rem; /* Reduce padding on nav for very small screens */
+    }
+
+    .logo {
+        font-size: 1.2rem; /* Smaller logo */
+    }
+
+    .hero-content {
+        padding: 1.5rem; /* Reduce padding in hero for tight screens */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Even smaller hero title */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Even smaller hero paragraph */
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem; /* Smaller CTA button */
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 2.5rem 0.8rem; /* Minimal padding for sections */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Smaller section titles */
+        margin-bottom: 1.5rem;
+    }
+
+    .about-image {
+        height: 250px; /* Further reduce image height */
+    }
+
+    .about-text p {
+        font-size: 1rem; /* Smaller body text for about section */
+    }
+
+    .skill-card {
+        padding: 1.5rem; /* Smaller padding for skill cards */
+    }
+
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .project-content {
+        padding: 1rem; /* Smaller padding for project cards */
+    }
+
+    .project-image {
+        height: 180px; /* Slightly reduce project image height */
+    }
+
+    .project-content h3 {
+        font-size: 1.1rem; /* Smaller project titles */
+    }
+
+    .project-tech {
+        gap: 0.3rem; /* Smaller gap for tech tags */
+    }
+
+    .tech-tag {
+        font-size: 0.75rem; /* Smaller tech tags */
+        padding: 0.2rem 0.6rem;
+    }
+
+    .project-links {
+        flex-direction: column; /* Stack project links */
+        gap: 0.8rem;
+    }
+
+    .project-link {
+        width: 100%; /* Make links full width */
+        text-align: center;
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .contact-info {
+        padding: 2rem; /* Smaller padding for contact info */
+    }
+
+    .contact-item {
+        font-size: 1rem; /* Smaller contact text */
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .contact-form {
+        padding: 2rem; /* Smaller padding for contact form */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem; /* Smaller input fields */
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 1.5rem; /* Smaller footer padding */
+    }
+
+    .social-link {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}

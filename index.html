@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Anto </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Halo, Saya <span id="hero-name">Anto</span></h1>
+            <p>Web Developer & UI/UX Designer yang passionate dalam menciptakan pengalaman digital yang menawan</p>
+            <a href="#projects" class="cta-button">Lihat Portfolio</a>
+        </div>
+    </section>
+
+    <section id="about" class="fade-in">
+        <h2>Tentang Saya</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="img/anto.jpeg" alt="Foto Profil Anto">
+            </div>
+            <div class="about-text">
+                <p>Saya adalah seorang web developer dengan pengalaman 3+ tahun dalam mengembangkan aplikasi web modern.
+                    Saya memiliki passion yang besar dalam teknologi dan selalu antusias untuk belajar hal-hal baru.</p>
+                <p>Keahlian saya mencakup front-end development dengan React, Vue.js, dan vanilla JavaScript, serta
+                    back-end development dengan Node.js dan Python. Saya juga memiliki pengalaman dalam UI/UX design dan
+                    database management.</p>
+                <p>Saya percaya bahwa website yang baik tidak hanya indah dipandang, tetapi juga fungsional dan
+                    user-friendly. Setiap project yang saya kerjakan selalu mengutamakan pengalaman pengguna yang
+                    optimal.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="fade-in">
+        <h2>Keahlian</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-desktop"></i></div> <h3>Frontend Development</h3>
+                <p>HTML5, CSS3, JavaScript, React, Vue.js, Responsive Design</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-server"></i></div>
+                <h3>Backend Development</h3>
+                <p>Node.js, Python, PHP, Express.js, RESTful APIs</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+                <h3>UI/UX Design</h3>
+                <p>Figma, Adobe XD, Prototyping, User Research</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <h3>Database</h3>
+                <p>MySQL, PostgreSQL, MongoDB, Firebase</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="fade-in">
+        <h2>Portfolio Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="img/tokmodern.png" alt="Thumbnail Proyek Toko Online Modern" class="project-image">
+                <div class="project-content">
+                    <h3>Toko Online Modern</h3>
+                    <p>Platform e-commerce lengkap dengan sistem pembayaran, manajemen inventory, dan dashboard admin.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Stripe</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Hubungi Saya</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Mari Berkolaborasi!</h3>
+                <p>Saya selalu terbuka untuk project baru dan kesempatan kolaborasi yang menarik.</p>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <strong>Email</strong><br>
+                        <a href="mailto:Antoganteng@email.com">Antoganteng@email.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div>
+                        <strong>Phone</strong><br>
+                        <a href="tel:+6224642345">+62 32-432-5553</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <strong>Location</strong><br>
+                        Jakarta, Indonesia
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/meokonen" method="POST">
+                <div class="form-group">
+                    <label for="name">Antoganteng</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="mailto:Antoganteng@email.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/Antoganteng" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Antoganteng" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/Antoganteng" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        <p>&copy; 2024 Anto. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script> </body>
+
+</html>
